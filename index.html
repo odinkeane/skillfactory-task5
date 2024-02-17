@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="field" style="position: relative;">
+    </div>
+
+
+    <div class="info">
+        <div>
+            <p>NOW<br><span class="score-now"></span></p>
+        </div>
+        <div>
+            <p>BEST<br><span class="score-best"></span></p>
+        </div>
+
+        <div class="settings">
+            <div class="control">control</div>
+            <div class="game-settings">settings</div>
+        </div>
+
+        <div class="control-div" style="top:100%">
+            <p>W - up</p>
+            <p>S - down</p>
+            <p>A - left</p>
+            <p>D - right</p>
+            <p>R - restart</p>
+            <p>SPACE - pause</p>
+        </div>
+
+        <div class="game-settings-div" style="top: 100%;">
+            <p>Level</p>
+            <p class="easy choose" onclick="changeLevel('easy')">Easy</p>
+            <p class="medium" onclick="changeLevel('medium')">Medium</p>
+            <p class="hard" onclick="changeLevel('hard')">Hard</p>
+            <p><label for="walls"><input class="walls" id="walls" type="checkbox"> through the walls</label></p>
+            <p><label for="speed"><input class="speed" id="speed" type="checkbox"> speed up</label></p>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

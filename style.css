@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Tetris";
+    src: url(Tetris.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tetris', monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0px 12px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, .96), rgba(0, 0, 0, .9)), url(task5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    position: relative;
+    align-self: stretch;
+    margin: 12px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    width: 40%;
+    color: rgb(162, 162, 162);
+    font-size: 64px;
+    font-weight: bold;
+    text-align: right;
+    padding: 40px;
+    line-height: 1.3em;
+    text-shadow: 2px 2px 2px white;
+    letter-spacing: 10px;
+    max-width: 500px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.info p {
+    margin: 40px 0px;
+}
+
+.settings {
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    line-height: 1em;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(128,10,20);
+    text-shadow: 3px 3px 2px rgb(128,10,20);
+    
+}
+
+.settings div {
+    padding: 10px 30px;
+    z-index: 2;
+}
+
+.settings div:hover {
+    cursor: pointer;
+}
+
+.control-div, .game-settings-div{
+    
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 100%;
+    background: black;
+    padding: 50px;
+    text-align: left;
+    line-height: 0.6em;
+    font-size: 0.5em;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.game-settings-div p{
+    line-height: 1em;
+}
+
+.game-settings-div p:first-child:hover{
+    cursor: default;
+}
+
+.game-settings-div p:not(p:first-child):hover, .choose{
+    color: rgb(128,10,20);
+    text-shadow: 3px 3px 2px rgb(128,10,20);
+    cursor: pointer;
+}
+.game-settings-div label:hover{
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: black;
+    margin: 0;
+    border: 2px solid rgb(128,10,20);;
+    border-radius: 20px;
+    display: grid;
+    place-content: center;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+}
+
+
+
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 2em;
+    height: 2em;
+    transform: scale(0);
+    box-shadow: inset 100px 100px rgb(128,10,20);
+    clip-path: polygon(10% 0%, 0% 10%, 40% 50%, 0% 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0%, 50% 40%);
+
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1.2);
+}
